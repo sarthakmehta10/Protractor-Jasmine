@@ -1,4 +1,4 @@
-# Protractor-Jasmine
+# protractor-jasmine
 Protractor configured with jasmine framework
 
 Preconditions - Node.Js
