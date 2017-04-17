@@ -1,0 +1,13 @@
+{
+    "name": "protractor-jasmine",
+    "version": "0.0.1",
+    "main": "conf.js",
+    "devDependencies": {
+        "protractor": "~4.0.13",
+        "webdriver-manager": "^12.0.1"
+    },
+    "author": "Sarthak Mehta",
+    "repository": {
+        "type": "git"
+    }
+}
