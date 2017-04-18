@@ -7,13 +7,27 @@ describe('Protractor-Jasmine', function () {
         signed_as = element(by.css('strong[class="css-truncate-target"]'));
     it('Log in and check the user', function () {
         browser.ignoreSynchronization = true;
-        browser.get('https://github.com');
-        browser.driver.manage().window().maximize();
-        sign_in.click();
-        username.sendKeys('sarthakmehta10');
-        password.sendKeys('s@rth@k123');
-        login.click();
-        profile.click();
-        expect(signed_as.getText()).toEqual('sarthakmehta10');
+        return browser.get('https://github.com')
+            .then(function () {
+            return browser.driver.manage().window().maximize();
+        })
+            .then(function () {
+            return sign_in.click();
+        })
+            .then(function () {
+            return username.sendKeys('sarthakmehta10');
+        })
+            .then(function () {
+            return password.sendKeys('s@rth@k123');
+        })
+            .then(function () {
+            return login.click();
+        })
+            .then(function () {
+            return profile.click();
+        })
+            .then(function () {
+            return expect(signed_as.getText()).toEqual('sarthakmehta10');
+        });
     });
 });
